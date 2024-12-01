@@ -13,4 +13,15 @@ class ArraysAndStringsTest {
         assertTrue(ArraysAndStrings.isUniqueSort("abcdefghiklmnopqrstuv142958%^"));
         assertFalse(ArraysAndStrings.isUniqueSort("abcdefghigklmnopqrstuv14452995858%^"));
     }
+
+    @Test
+    void isUniqueHashSet() {
+        assertFalse(ArraysAndStrings.isUniqueHashSet(null));
+        assertTrue(ArraysAndStrings.isUniqueHashSet(""));
+        assertTrue(ArraysAndStrings.isUniqueHashSet("a"));
+        assertFalse(ArraysAndStrings.isUniqueHashSet("aa"));
+        assertTrue(ArraysAndStrings.isUniqueHashSet("Aa"));
+        assertTrue(ArraysAndStrings.isUniqueHashSet("abcdefghiklmnopqrstuv142958%^"));
+        assertFalse(ArraysAndStrings.isUniqueHashSet("abcdefghigklmnopqrstuv14452995858%^"));
+    }
 }
