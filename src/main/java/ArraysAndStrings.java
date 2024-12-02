@@ -69,4 +69,36 @@ public class ArraysAndStrings {
 
         return true;
     }
+
+    /*
+     * Determines if a string has all unique characters using Ascii array approach
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     * special cases: null and str.len <= 1
+     *
+     * create an array of 256 booleans for each Ascii characters
+     *
+     * for every character in str
+     *    if array[char] is true, return false
+     *    else set array[char] to true
+     *
+     * return true
+     */
+    public static boolean isUniqueAsciiArray(String str){
+        if(str == null)
+            return false;
+
+        if(str.length() <= 1)
+            return true;
+
+        boolean[] charExists = new boolean[256];
+        for(int i = 0; i < str.length(); i++){
+            if(charExists[str.charAt(i)])
+                return false;
+            else
+                charExists[str.charAt(i)] = true;
+        }
+
+        return true;
+    }
 }

@@ -24,4 +24,15 @@ class ArraysAndStringsTest {
         assertTrue(ArraysAndStrings.isUniqueHashSet("abcdefghiklmnopqrstuv142958%^"));
         assertFalse(ArraysAndStrings.isUniqueHashSet("abcdefghigklmnopqrstuv14452995858%^"));
     }
+
+    @Test
+    void isUniqueAsciiArray() {
+        assertFalse(ArraysAndStrings.isUniqueAsciiArray(null));
+        assertTrue(ArraysAndStrings.isUniqueAsciiArray(""));
+        assertTrue(ArraysAndStrings.isUniqueAsciiArray("a"));
+        assertFalse(ArraysAndStrings.isUniqueAsciiArray("aa"));
+        assertTrue(ArraysAndStrings.isUniqueAsciiArray("Aa"));
+        assertTrue(ArraysAndStrings.isUniqueAsciiArray("abcdefghiklmnopqrstuv142958%^"));
+        assertFalse(ArraysAndStrings.isUniqueAsciiArray("abcdefghigklmnopqrstuv14452995858%^"));
+    }
 }
