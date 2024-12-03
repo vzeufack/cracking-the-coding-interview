@@ -1,12 +1,12 @@
-/**
- * Solutions for Chapter 1: Arrays and Strings
- */
+package ArraysAndStrings;
+
 import java.util.Arrays;
 import java.util.HashSet;
-public class ArraysAndStrings {
 
+//Determines if a string has all unique characters
+public class IsUnique {
     /*
-     * Determines if a string has all unique characters using sorting approach
+     * sorting approach
      * Time complexity: O(n*lgn)
      * Space complexity: O(n)
      * special cases: null and str.len <= 1
@@ -20,7 +20,7 @@ public class ArraysAndStrings {
      *
      * return true
      */
-    public static boolean isUniqueSort(String str){
+    public static boolean sortApproach(String str){
         if(str == null)
             return false;
 
@@ -39,7 +39,7 @@ public class ArraysAndStrings {
     }
 
     /*
-     * Determines if a string has all unique characters using hashset approach
+     * hashset approach
      * Time complexity: O(n)
      * Space complexity: O(n)
      * special cases: null and str.len <= 1
@@ -52,7 +52,7 @@ public class ArraysAndStrings {
      *
      * return true
      */
-    public static boolean isUniqueHashSet(String str){
+    public static boolean hashSetApproach(String str){
         if(str == null)
             return false;
 
@@ -71,7 +71,7 @@ public class ArraysAndStrings {
     }
 
     /*
-     * Determines if a string has all unique characters using Ascii array approach
+     * Ascii array approach
      * Time complexity: O(n)
      * Space complexity: O(1)
      * special cases: null and str.len <= 1
@@ -84,7 +84,7 @@ public class ArraysAndStrings {
      *
      * return true
      */
-    public static boolean isUniqueAsciiArray(String str){
+    public static boolean asciiArrayApproach(String str){
         if(str == null)
             return false;
 
