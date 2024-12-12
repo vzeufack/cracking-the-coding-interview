@@ -20,4 +20,20 @@ class OneAwayTest {
         assertFalse(OneAway.linearApproach("a", "abc"));
         assertFalse(OneAway.linearApproach("pale", "bake"));
     }
+
+    @Test
+    void testQuadraticApproach() {
+        assertTrue(OneAway.quadraticApproach("", "a"));
+        assertTrue(OneAway.quadraticApproach("a", ""));
+        assertTrue(OneAway.quadraticApproach("pale", "ple"));
+        assertTrue(OneAway.quadraticApproach("pales", "pale"));
+        assertTrue(OneAway.quadraticApproach("pale", "bale"));
+        assertTrue(OneAway.quadraticApproach("12345", "12345"));
+
+        assertFalse(OneAway.quadraticApproach(null, "a"));
+        assertFalse(OneAway.quadraticApproach("a", null));
+        assertFalse(OneAway.quadraticApproach(null, null));
+        assertFalse(OneAway.quadraticApproach("a", "abc"));
+        assertFalse(OneAway.quadraticApproach("pale", "bake"));
+    }
 }
